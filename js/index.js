@@ -17,3 +17,10 @@ Logo.addEventListener("click", () => {
     Logo.style.fontSize ="7rem"; 
     Logo.style.color="#ffd800";
 })
+
+const swapImg = document.querySelector("img-fluid rounded")
+
+swapImg.addEventListener("click", () => {
+    swapImg.src=""
+
+})
