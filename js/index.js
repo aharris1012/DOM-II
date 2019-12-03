@@ -1,4 +1,7 @@
 // Your code goes here
+
+
+//1//
 const busImg = document.querySelector(".intro img")
 
 busImg.addEventListener("mouseenter", () => {
@@ -6,11 +9,12 @@ busImg.addEventListener("mouseenter", () => {
     busImg.style.transition ="transform 2s"
 })
 
+//2//
 busImg.addEventListener("mouseleave",() =>{
     busImg.style.transform ="scale(1)"
 })
 
-
+//3//
 const Logo= document.querySelector(".logo-heading")
 
 Logo.addEventListener("click", () => {
@@ -18,9 +22,28 @@ Logo.addEventListener("click", () => {
     Logo.style.color="#ffd800";
 })
 
-const swapImg = document.querySelector("img-fluid rounded")
+//4//
+const Nav= document.querySelector("nav");
 
-swapImg.addEventListener("click", () => {
-    swapImg.src=""
+Nav.addEventListener("mouseover", function (e) {
+    e.target.style.backgroundColor="#ffd800";
 
 })
+
+
+//5//
+const swapImg = document.querySelector(".img-fluid")
+
+swapImg.addEventListener("click", () => {
+    swapImg.src="img/sedonabus.jpg";
+
+})  
+
+//6//
+const DoubleImg = document.querySelector("h2")
+
+DoubleImg.addEventListener("dblclick", () =>{
+    DoubleImg.style.transform ="rotate(20deg)";
+})
+
+
