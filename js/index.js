@@ -27,8 +27,10 @@ const Nav= document.querySelector("nav");
 
 Nav.addEventListener("mouseover", function (e) {
     e.target.style.backgroundColor="#ffd800";
-    Nav.stopPropogation();
+    
 })
+
+const Links = document.querySelector("nav-link"[1])
 
 
 
@@ -57,21 +59,21 @@ const Button= document.querySelectorAll(".btn").forEach (e =>{
 })
 
 //8//
-
-const destinationImg = document.querySelectorAll(".content-destination img")
-
-destinationImg.addEventListener("focus", () =>{
-    destinationImg.style.backgroundColor= "#bd5734";
+const buttons = document.querySelectorAll('.btn');
+buttons.forEach(button => {
+    button.addEventListener('contextmenu', () => {
+        button.style.backgroundColor = "orange";
+    })
 })
+
 
 //9//
-document.querySelectorAll(".content-destination p").addEventListener("copy",() =>{
-alert ("DON'T COPY THIS!")
-})
 
+content.forEach(thing => {
+    thing.addEventListener("copy", () => {
+        thing.style.color = 'yellow';
+    })
+}) 
  
 
 //10//
-window.addEventListener("load", () => {
-    alert("Let's Have Fun!")
-})
