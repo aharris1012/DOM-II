@@ -27,8 +27,9 @@ const Nav= document.querySelector("nav");
 
 Nav.addEventListener("mouseover", function (e) {
     e.target.style.backgroundColor="#ffd800";
-
+    Nav.stopPropogation();
 })
+
 
 
 //5//
@@ -64,13 +65,13 @@ destinationImg.addEventListener("focus", () =>{
 })
 
 //9//
-const topimage= document.querySelectorAll('.img-content')[0];
-
-topimage.addEventListener("load", () => {
-    topimage.style.backgroundColor = "pink"; 
+document.querySelectorAll(".content-destination p").addEventListener("copy",() =>{
+alert ("DON'T COPY THIS!")
 })
 
+ 
+
 //10//
-document.querySelector('body').addEventListener('keydown', (e)=>{
-    alert(`You pressed ${e.key}`)
+window.addEventListener("load", () => {
+    alert("Let's Have Fun!")
 })
