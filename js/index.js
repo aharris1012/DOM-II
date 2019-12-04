@@ -27,10 +27,9 @@ const Nav= document.querySelector("nav");
 
 Nav.addEventListener("mouseover", function (e) {
     e.target.style.backgroundColor="#ffd800";
-    
+    Nav.stopPropogation();
 })
 
-const Links = document.querySelector("nav-link"[1])
 
 
 
@@ -59,21 +58,25 @@ const Button= document.querySelectorAll(".btn").forEach (e =>{
 })
 
 //8//
-const buttons = document.querySelectorAll('.btn');
-buttons.forEach(button => {
-    button.addEventListener('contextmenu', () => {
-        button.style.backgroundColor = "orange";
-    })
-})
+const contentColor = document.querySelectorAll('.text-content');
 
+contentColor.forEach((textBox) => {
+    window.addEventListener('keydown', (event) => {
+        event.target.style.backgroundColor = 'yellow';
+        console.log('keydown');
+    })
 
 //9//
-
-content.forEach(thing => {
-    thing.addEventListener("copy", () => {
-        thing.style.color = 'yellow';
-    })
-}) 
- 
+window.addEventListener('keyup', (event) => {
+    event.target.style.backgroundColor = '';
+    console.log('keyup');
+})
+})
 
 //10//
+window.addEventListener('resize', function() {
+    alert("DON'T SQUEEZZZ ME!");
+})
+ 
+
+
